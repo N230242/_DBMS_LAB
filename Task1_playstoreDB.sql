@@ -39,18 +39,27 @@ insert into apps values
 (1007,'candy crush',102,204,305,4.6,1000000000,0),
 (1008,'temple run',104,203,305,4.2,500000000,0);
 select * from apps;
-insert into devlopers values(106,'openai','usa',2015);
+insert into developers values(106,'openai','usa',2015);
+select * from developers;
 insert into categories values(306,'artifical intelligence',12);
+select * from categories;
 insert into apps values(1009,'chatgpt',106,201,302,4.8,1000000000,0);
+select * from apps;
 update apps
 set rating=4.5 where app_id=1008;
-delete from devlopers where dev_id=105;
+select * from apps;
+delete from developers where dev_id=105;
+select * from developers;
 update publishers
 set support_email='suport@galaxy.com' where publisher_id=202;
+select * from publishers;
 insert into apps values
-(1010,),
-(1011,);
+(1010,'duolingo',103,201,302,4.7,750000000,0),
+(1011,'canva design',104,202,301,4.8,600000000,0);
+select * from apps;
 update apps
 set price=199 where app_id=1006;
+select * from apps;
 delete from categories
 where category_id=303;
+select * from categories;
