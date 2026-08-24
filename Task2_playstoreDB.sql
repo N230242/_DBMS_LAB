@@ -1,0 +1,18 @@
+use playstoreDB;
+select upper(dev_name) from developers;
+select lower(dev_name) from developers;
+select length(app_name) from apps;
+select concat(category_name,' ',length(category_name)) from categories;
+select current_date();
+select current_time();
+select round(rating,0) from apps;
+select concat(app_name,' ',substring(app_name,1,5)) from apps;
+select concat(dev_name,' ',country) from developers;
+select ceil(price) from apps;
+select dev_name,found_year from developers;
+select cast(downloads as char) from apps;
+select upper(app_name),rating from apps;
+select substring(category_name,1,3) from categories;
+select abs(price-200) as absolute_diff from apps;
+select concat(dev_name, ' ',length(dev_name)) from developers;
+select current_date(),current_timestamp();
