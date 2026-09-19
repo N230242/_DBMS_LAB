@@ -1,0 +1,21 @@
+use playstoreDB;
+select count(app_name) from apps;
+select avg(rating) from apps;
+select max(rating) from apps;
+select min(rating) from apps;
+select sum(downloads) from apps;
+select * from apps order by rating desc;
+select category_id,count(app_name) from apps group by category_id;
+select category_id,avg(rating) from apps group by category_id;
+select max(price),min(price) from apps;
+select app_name,downloads from apps order by downloads desc;
+select dev_id,count(app_name) from apps group by dev_id;
+select category_id from apps group by category_id having count(*)>1;
+select dev_id,sum(downloads) from apps group by dev_id;
+select publisher_id,avg(rating) from apps group by publisher_id;
+select dev_id from apps group by dev_id having count(*)>1;
+select category_id from apps group by category_id having avg(rating)>4.3;
+select category_id,count(app_name) from apps  group by category_id order by count(app_name) desc;
+select app_name from apps 
+where rating=(select max(rating) from apps);
+select dev_id,sum(price) from apps group by dev_id;
